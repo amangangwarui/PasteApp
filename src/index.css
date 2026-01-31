@@ -1,0 +1,479 @@
+/* body {
+  font-family: Inter, sans-serif;
+  background: #f8fafc;
+}
+
+body.dark {
+  background: #020617;
+  color: white;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: #020617;
+  color: white;
+}
+
+.title-input,
+.search-bar {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.editor-wrapper {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 16px;
+  margin-bottom: 12px;
+}
+
+.editor-header {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.editor-textarea {
+  width: 100%;
+  min-height: 260px;
+  background: transparent;
+  color: white;
+  padding: 16px;
+  border: none;
+}
+
+.primary-btn {
+  padding: 10px 16px;
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
+}
+
+.paste-card {
+  background: white;
+  padding: 18px;
+  border-radius: 14px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+body.dark .paste-card {
+  background: #020617;
+}
+
+.paste-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.icon-btn {
+  padding: 8px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.1);
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #020617;
+  padding: 24px;
+  width: 60%;
+  border-radius: 14px;
+} */
+
+
+
+
+
+/* ========================
+   GLOBAL (Facebook Feel)
+======================== */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+  background: #f0f2f5;
+  color: #050505;
+}
+
+/* ========================
+   LAYOUT
+======================== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ========================
+   NAVBAR (FB style)
+======================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #ffffff;
+  padding: 14px 20px;
+  border-bottom: 1px solid #dddfe2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h2 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* ========================
+   INPUTS
+======================== */
+input,
+textarea {
+  font-family: inherit;
+}
+
+.title-input,
+.search-bar {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #dddfe2;
+  font-size: 15px;
+  background: #ffffff;
+  margin-bottom: 12px;
+}
+
+.title-input:focus,
+.search-bar:focus {
+  outline: none;
+  border-color: #1877f2;
+}
+
+/* ========================
+   EDITOR (clean, not glass)
+======================== */
+.editor-wrapper {
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #dddfe2;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.editor-header {
+  padding: 10px 14px;
+  border-bottom: 1px solid #dddfe2;
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.editor-textarea {
+  width: 100%;
+  min-height: 220px;
+  padding: 14px;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 15px;
+  background: #ffffff;
+}
+
+/* ========================
+   PRIMARY BUTTON (FB blue)
+======================== */
+.primary-btn {
+  background: #1877f2;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background: #166fe5;
+}
+
+/* ========================
+   SECTION
+======================== */
+.section {
+  margin-top: 30px;
+}
+
+.section h2 {
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+/* ========================
+   PASTE CARD (FB post)
+======================== */
+.paste-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 14px;
+  border: 1px solid #dddfe2;
+}
+
+.paste-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.paste-card p {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #65676b;
+}
+
+/* ========================
+   TOP RIGHT ICONS
+======================== */
+.paste-actions {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  gap: 6px;
+}
+
+.icon-btn {
+  background: #f0f2f5;
+  border: none;
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.icon-btn:hover {
+  background: #e4e6eb;
+}
+
+/* ========================
+   BOTTOM META
+======================== */
+.meta {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #65676b;
+}
+
+.badge {
+  background: #e4e6eb;
+  color: #050505;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+}
+
+/* ========================
+   MODAL (FB style)
+======================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #ffffff;
+  width: 60%;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.modal h2 {
+  margin-top: 0;
+}
+
+.modal pre {
+  background: #f0f2f5;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  white-space: pre-wrap;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #f0f2f5;
+  border: none;
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background: #e4e6eb;
+}
+
+
+
+
+
+
+
+/* ================================
+   FACEBOOK DARK MODE
+================================ */
+
+/* Background */
+body.dark {
+  background: #18191a;
+  color: #e4e6eb;
+}
+
+/* Navbar */
+body.dark .navbar {
+  background: #242526;
+  border-bottom: 1px solid #3a3b3c;
+}
+
+body.dark .navbar h2 {
+  color: #e4e6eb;
+}
+
+/* Inputs */
+body.dark input,
+body.dark textarea {
+  background: #242526;
+  color: #e4e6eb;
+  border-color: #3a3b3c;
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder {
+  color: #b0b3b8;
+}
+
+/* Editor */
+body.dark .editor-wrapper {
+  background: #242526;
+  border-color: #3a3b3c;
+}
+
+body.dark .editor-header {
+  border-bottom: 1px solid #3a3b3c;
+}
+
+body.dark .editor-textarea {
+  background: #242526;
+  color: #e4e6eb;
+}
+
+/* Paste cards */
+body.dark .paste-card {
+  background: #242526;
+  border-color: #3a3b3c;
+}
+
+body.dark .paste-card h3 {
+  color: #e4e6eb;
+}
+
+body.dark .paste-card p {
+  color: #b0b3b8;
+}
+
+/* Buttons */
+body.dark .primary-btn {
+  background: #2374e1;
+}
+
+body.dark .primary-btn:hover {
+  background: #1b66c9;
+}
+
+/* Icon buttons */
+body.dark .icon-btn {
+  background: #3a3b3c;
+  color: #e4e6eb;
+}
+
+body.dark .icon-btn:hover {
+  background: #4e4f50;
+}
+
+/* Meta info */
+body.dark .meta {
+  color: #b0b3b8;
+}
+
+body.dark .badge {
+  background: #3a3b3c;
+  color: #e4e6eb;
+}
+
+/* Modal */
+body.dark .modal {
+  background: #242526;
+  color: #e4e6eb;
+}
+
+body.dark .modal pre {
+  background: #18191a;
+}
+
+body.dark .close-btn {
+  background: #3a3b3c;
+}
+
+body.dark .close-btn:hover {
+  background: #4e4f50;
+}
